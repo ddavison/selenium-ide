@@ -1,0 +1,45 @@
+{
+  "name": "Selenium IDE",
+  "short_name": "Selenium IDE",
+  "description": "Selenium IDE",
+  "author": "SeleniumHQ",
+  "homepage_url": "https://",
+  "version": "1.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Selenium IDE",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "512": "assets/images/selenium-ide-logo-512.png",
+      "128": "assets/images/selenium-ide-logo-128.png",
+      "48":  "assets/images/selenium-ide-logo-48.png",
+      "24":  "assets/images/selenium-ide-logo-24.png",
+      "16":  "assets/images/selenium-ide-logo-16.png"
+    }
+  },
+
+  "background": {
+    "scripts": ["assets/js/constant.js"]
+  },
+
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+
+  "offline_enabled": true,
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus"
+  ],
+
+  "icons": {
+    "512": "assets/images/selenium-ide-logo-512.png",
+    "128": "assets/images/selenium-ide-logo-128.png",
+    "48":  "assets/images/selenium-ide-logo-48.png",
+    "24":  "assets/images/selenium-ide-logo-24.png",
+    "16":  "assets/images/selenium-ide-logo-16.png"
+  }
+}

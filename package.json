@@ -1,0 +1,14 @@
+{
+  "name": "selenium-ide",
+  "version": "0.0.1",
+  "description": "Selenium IDE",
+  "dependencies": {},
+  "authors": [
+    "Daniel Davison <sircapsalot@gmail.com>",
+    "Josh Mullins <firstmilkman@gmail.com>"
+  ],
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://"
+  }
+}
