@@ -127,5 +127,6 @@ typings/
 #!! ERROR: typescript is undefined. Use list command to see defined gitignore types !!#
 
 # End of https://www.gitignore.io/api/intellij,typescript,node
-**/*.js
+src/**/*.js
+dist/**/*.js
 **/*.html
