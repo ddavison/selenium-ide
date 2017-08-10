@@ -4,6 +4,7 @@
   "description": "Selenium IDE",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "copy-webpack-plugin": "^4.0.1",
     "webpack": "^3.5.2"
   },
   "authors": [

@@ -1,5 +1,5 @@
 var path = require('path');
-
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var babelOptions = {
   "presets": [
@@ -22,8 +22,8 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, './dist/scripts'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, './dist'),
+    filename: './scripts/[name].js',
     chunkFilename: '[chunkhash].js'
   },
   module: {
@@ -51,6 +51,15 @@ module.exports = {
     }]
   },
   plugins: [
+    new CopyWebpackPlugin([
+            // {output}/file.txt
+            { from: './manifest.json' },
+            { from: './images/selenium-ide-logo-16.png', to: './assets/images/selenium-ide-logo-16.png' },
+            { from: './images/selenium-ide-logo-24.png', to: './assets/images/selenium-ide-logo-24.png' },
+            { from: './images/selenium-ide-logo-48.png', to: './assets/images/selenium-ide-logo-48.png' },
+            { from: './images/selenium-ide-logo-128.png', to: './assets/images/selenium-ide-logo-128.png' },
+            { from: './images/selenium-ide-logo-512.png', to: './assets/images/selenium-ide-logo-512.png' },
+    ])
   ],
   resolve: {
     extensions: ['.ts', '.js']
