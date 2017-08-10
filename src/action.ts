@@ -1,8 +1,6 @@
 import { Logger } from "./logger";
-import { Finder } from "./finder";
 
 export class Action {
-  finder: Finder;
   logger: Logger;
 
   constructor() {
@@ -10,7 +8,9 @@ export class Action {
   }
 
   executeAction(action, args) {
+    // log the action
     this.logger.info(action, args);
+    // execute the action
 
   }
 }
