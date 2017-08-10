@@ -19,7 +19,7 @@
   },
 
   "background": {
-    "scripts": ["assets/js/constant.js"]
+    "scripts": []
   },
 
   "options_ui": {

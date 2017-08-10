@@ -17,24 +17,24 @@ export class Logger {
     this.level = level;
   }
 
-  debug(message): string {
-    return this.log(this.DEBUG, message);
+  debug(action: string, message): string {
+    return this.log(this.DEBUG, action, message);
   }
 
-  info(message): string {
-    return this.log(this.INFO, message);
+  info(action: string, message): string {
+    return this.log(this.INFO, action, message);
   }
 
-  warn(message): string {
-    return this.log(this.WARN, message);
+  warn(action: string, message): string {
+    return this.log(this.WARN, action, message);
   }
 
-  error(message): string {
-    return this.log(this.ERROR, message);
+  error(action: string, message): string {
+    return this.log(this.ERROR, action, message);
   }
 
-  private log(level, message): string {
-    let fullMessage = this.LEVELS[level] + ": " + message
+  private log(level: number, action: string, message): string {
+    let fullMessage = this.LEVELS[level] + ": [" + action + "] " + message;
     console.log(fullMessage);
     return fullMessage;
   }
