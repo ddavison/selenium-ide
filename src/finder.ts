@@ -1,10 +1,10 @@
-namespace IDE {
-  class Finder {
+class Finder {
 
-    constructor() {}
+  constructor() {}
 
-    find(selector) {
-      return document.querySelector(selector); // only css for now...
-    }
+  find(selector) {
+    return document.querySelector(selector); // only css for now...
   }
 }
+
+export { Finder };
