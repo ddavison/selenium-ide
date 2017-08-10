@@ -1,6 +1,6 @@
-import { Action } from "../action";
+import { Step } from "../step";
 
-export class Click extends Action {
+export class Click extends Step {
   executeAction(args): any {
     // execute click here
 

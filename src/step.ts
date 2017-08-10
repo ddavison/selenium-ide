@@ -1,7 +1,11 @@
 import { Logger } from "./logger";
+import { By } from "./by";
 
-export class Action {
+export class Step {
   logger: Logger;
+  action: string;
+  by: By;
+  selector: string;
 
   constructor() {
     this.logger = new Logger();
