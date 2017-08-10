@@ -1,13 +1,18 @@
 import { Driver } from "./driver";
+import { Logger } from "./logger";
 
 export class Test {
-  driver: Driver;
+  logger: Logger = new Logger();
+  driver: Driver = new Driver();
   name: string;
-  steps: any[];
+  steps: string[][];
 
   run() {
-    for (let step in this.steps) {
-      // running step
+    for (let step of this.steps) {
+      let action = step[0];
+      let args = step.shift();
+
+      // new <Action>(args)
     }
   }
 }
