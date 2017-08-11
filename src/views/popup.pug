@@ -2,8 +2,12 @@ html
   head
     title IDE
   body#popup
-    h4 Selenium IDE
-    hr/
+    .container
+      h4 Selenium IDE
+      hr/
 
+      // loop through tests
+      a(href="ide.html?test=1") Selenium Test
 
-
+      nav#footer
+        a(href="ide.html" target="_blank" class="btn btn-default") New Test
