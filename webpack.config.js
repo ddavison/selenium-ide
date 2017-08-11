@@ -17,14 +17,16 @@ var babelOptions = {
 module.exports = {
   cache: true,
   entry: {
-    extension: './extension-scripts.ts',
-    //TODO: Separate this to prevent loading within the extension itself
-    content: './content-scripts.ts',
-    vendor: [
-      './vendor/superhero/superhero.min.css'
-      // 'babel-polyfill',
+    extension: [
+      './src/main/extension.ts',
+      './vendor/superhero/superhero.min.css',
+      './src/sass/main.sass'
     ],
-    styles: './src/sass/main.sass'
+    content: './src/main/content.ts',
+    background: './src/main/background.ts',
+    // vendor: [
+    //   // 'babel-polyfill',
+    // ],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -95,20 +97,21 @@ module.exports = {
       { from: './images/selenium-ide-logo-48.png', to: './assets/images/selenium-ide-logo-48.png' },
       { from: './images/selenium-ide-logo-128.png', to: './assets/images/selenium-ide-logo-128.png' },
       { from: './images/selenium-ide-logo-512.png', to: './assets/images/selenium-ide-logo-512.png' },
-
-      // { from: './vendor/superhero.min.css', to: './assets/stylesheets/superhero.min.css' }
     ]),
     new HtmlWebpackPlugin({
       filename: './options.html',
-      template: './src/views/options.pug'
+      template: './src/views/options.pug',
+      chunks: ['extension'],
     }),
     new HtmlWebpackPlugin({
       filename: './ide.html',
-      template: './src/views/ide.pug'
+      template: './src/views/ide.pug',
+      chunks: ['extension'],
     }),
     new HtmlWebpackPlugin({
       filename: './popup.html',
-      template: './src/views/popup.pug'
+      template: './src/views/popup.pug',
+      chunks: ['extension'],
     }),
   ],
   resolve: {

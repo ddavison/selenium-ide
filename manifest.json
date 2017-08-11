@@ -19,7 +19,7 @@
   },
 
   "background": {
-    "scripts": ["scripts/extension.js"]
+    "scripts": ["scripts/background.js"]
   },
 
   "options_ui": {
