@@ -1,5 +1,5 @@
 import { Logger } from "../logger";
-import { MessageHandler } from "./MessageHandler";
+import { MessageHandler } from "./message-handler";
 
 export class ActionRecorder {
   messageHandler: MessageHandler = new MessageHandler();
