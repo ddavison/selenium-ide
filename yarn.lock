@@ -2,6 +2,26 @@
 # yarn lockfile v1
 
 
+"@types/chrome@^0.0.48":
+  version "0.0.48"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.48.tgz#e18db15773cfc32121bcfd116a09724ff303261f"
+  dependencies:
+    "@types/filesystem" "*"
+
+"@types/filesystem@*":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/filesystem/-/filesystem-0.0.28.tgz#3fd7735830f2c7413cb5ac45780bc45904697b0e"
+  dependencies:
+    "@types/filewriter" "*"
+
+"@types/filewriter@*":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/filewriter/-/filewriter-0.0.28.tgz#c054e8af4d9dd75db4e63abc76f885168714d4b3"
+
+"@types/firefox@^0.0.28":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/firefox/-/firefox-0.0.28.tgz#2c35851d17afd57713eac3a6ed65233e9ce042c9"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"

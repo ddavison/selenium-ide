@@ -17,7 +17,9 @@ var babelOptions = {
 module.exports = {
   cache: true,
   entry: {
-    main: './src/module.ts',
+    extension: './extension-scripts.ts',
+    //TODO: Seperate this to prevent loading within the extension itself
+    content: './content-scripts.ts',
     // other: './src/other.js',
     // vendor: [
     //   'babel-polyfill',

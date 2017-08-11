@@ -19,7 +19,7 @@
   },
 
   "background": {
-    "scripts": []
+    "scripts": ["scripts/extension.js"]
   },
 
   "options_ui": {
@@ -27,12 +27,11 @@
     "page": "options.html"
   },
 
-  "offline_enabled": true,
-
   "permissions": [
     "tabs",
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "<all_urls>"
   ],
 
   "icons": {
@@ -41,5 +40,13 @@
     "48":  "assets/images/selenium-ide-logo-48.png",
     "24":  "assets/images/selenium-ide-logo-24.png",
     "16":  "assets/images/selenium-ide-logo-16.png"
-  }
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [],
+      "js": ["scripts/content.js"]
+    }
+  ]
 }
