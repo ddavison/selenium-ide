@@ -18,8 +18,8 @@ module.exports = {
   cache: true,
   entry: {
     extension: './extension-scripts.ts',
-    //TODO: Seperate this to prevent loading within the extension itself
-    content: './content-scripts.ts',
+    //TODO: Separate this to prevent loading within the extension itself
+    content: './content-scripts.ts'
     // other: './src/other.js',
     // vendor: [
     //   'babel-polyfill',
@@ -72,13 +72,23 @@ module.exports = {
       { from: './images/selenium-ide-logo-48.png', to: './assets/images/selenium-ide-logo-48.png' },
       { from: './images/selenium-ide-logo-128.png', to: './assets/images/selenium-ide-logo-128.png' },
       { from: './images/selenium-ide-logo-512.png', to: './assets/images/selenium-ide-logo-512.png' },
+
+      { from: './vendor/superhero.min.css', to: './assets/stylesheets/superhero.min.css' }
     ]),
     new HtmlWebpackPlugin({
       filename: './options.html',
       template: './src/views/options.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: './ide.html',
+      template: './src/views/ide.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: './popup.html',
+      template: './src/views/popup.pug'
+    }),
   ],
   resolve: {
     extensions: ['.ts', '.js']
-  },
+  }
 };
