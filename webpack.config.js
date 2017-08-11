@@ -19,11 +19,12 @@ module.exports = {
   entry: {
     extension: './extension-scripts.ts',
     //TODO: Separate this to prevent loading within the extension itself
-    content: './content-scripts.ts'
-    // other: './src/other.js',
-    // vendor: [
-    //   'babel-polyfill',
-    // ]
+    content: './content-scripts.ts',
+    vendor: [
+      './vendor/superhero/superhero.min.css'
+      // 'babel-polyfill',
+    ],
+    styles: './src/sass/main.sass'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -62,6 +63,28 @@ module.exports = {
         }
       ]
     },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    },
+    {
+      test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+      loader: 'url-loader'
+    },
+    {
+      test: /\.s(c|a)ss$/,
+      use: [
+        {
+          loader: "style-loader" // creates style nodes from JS strings
+        },
+        {
+          loader: "css-loader" // translates CSS into CommonJS
+        },
+        {
+          loader: "sass-loader" // compiles Sass to CSS
+        }
+      ]
+    }
     ]
   },
   plugins: [
@@ -73,7 +96,7 @@ module.exports = {
       { from: './images/selenium-ide-logo-128.png', to: './assets/images/selenium-ide-logo-128.png' },
       { from: './images/selenium-ide-logo-512.png', to: './assets/images/selenium-ide-logo-512.png' },
 
-      { from: './vendor/superhero.min.css', to: './assets/stylesheets/superhero.min.css' }
+      // { from: './vendor/superhero.min.css', to: './assets/stylesheets/superhero.min.css' }
     ]),
     new HtmlWebpackPlugin({
       filename: './options.html',
