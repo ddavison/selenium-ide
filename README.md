@@ -1,4 +1,4 @@
-# Selenium IDE Rewrite  
+## Selenium IDE Rewrite  
 Prototype Phase
 
 ## Usage
